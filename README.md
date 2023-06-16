@@ -1,176 +1,169 @@
 # LLM_Autocontext
 
-LLM_Autocontext is a project aimed at creating a program that leverages the power of LLM (Like GPT-3) models to enhance context-awareness and memory within natural language processing tasks. This program takes the input and output of one LLM instance and incorporates it as contextual memory into the prompt of another instance. By enabling models to retain and utilize prior knowledge, LLM_Autocontext aims to improve the quality and coherence of generated responses.
+LLM_Autocontext is a Jupyter Notebook-based project that aims to enhance context-awareness and memory within natural language processing tasks by utilizing two instances of LLM (Like GPT-3) models. This notebook loads the LLM models and passes prompts between them to add context from the previous instance and update the context for subsequent interactions. By incorporating prior knowledge as contextual memory, LLM_Autocontext improves the quality and coherence of generated responses.
 
 ## Table of Contents
 
 - [LLM\_Autocontext](#llm_autocontext)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
-  - [TODO](#todo)
+  - [Roadmap](#roadmap)
   - [Features](#features)
   - [Installation](#installation)
+    - [(Only Template, Nothing here is really working yet)](#only-template-nothing-here-is-really-working-yet)
   - [Usage](#usage)
   - [Examples](#examples)
-- [Set up the context manager](#set-up-the-context-manager)
-- [Set the initial context](#set-the-initial-context)
-- [Set up the generator](#set-up-the-generator)
-- [Start a conversation](#start-a-conversation)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Introduction
 
-In many natural language processing tasks, context plays a crucial role in generating accurate and coherent responses. However, most LLM models lack an inherent memory mechanism to retain information from previous interactions. LLM_Autocontext addresses this limitation by introducing a program that facilitates the integration of context as memory.
+In many natural language processing tasks, context plays a crucial role in generating accurate and coherent responses. However, LLM models typically lack an inherent memory mechanism to retain information from previous interactions. LLM_Autocontext addresses this limitation by utilizing a Jupyter Notebook that incorporates context from one LLM instance to another.
 
-By utilizing LLM_Autocontext, you can enhance the context-awareness of LLM models and create more meaningful conversations or coherent text generation. The program acts as a bridge between two instances of LLM, where the output of one instance becomes the context for the next, providing a form of memory that informs subsequent responses.
+By leveraging LLM_Autocontext, you can enhance the context-awareness of LLM models and create more meaningful conversations or coherent text generation. The notebook acts as a bridge between two instances of LLM, where the output of one instance becomes the context for the next, providing a form of memory that informs subsequent responses.
 
-
-## TODO
+## Roadmap
 
 1. **Initial Project Setup**
    - [ ] Set up the project structure and directory.
-   - [ ] Create a README file with project details and roadmap.
-   - [ ] Initialize a Git repository and set up version control.
+   - [ ] Create a Jupyter Notebook file for LLM_Autocontext.
 
 2. **Research and Requirements Gathering**
-   - [ ] Conduct research on LLM models and context integration techniques.
-   - [ ] Identify suitable LLM frameworks and models to work with.
-   - [ ] Define the requirements and goals of the LLM_Autocontext program.
-   - [ ] Document the research findings and requirements.
+   - [ ] Research different LLM frameworks and models suitable for the project.
+   - [ ] Identify the best approach for passing prompts between LLM instances.
+   - [ ] Define the requirements and goals of the LLM_Autocontext notebook.
+   - [ ] Document the research findings and project requirements.
 
-3. **Implement LLMContextManager**
-   - [ ] Create the LLMContextManager class to manage the contextual memory.
-   - [ ] Implement the `set_context()` method to update the context with LLM outputs.
-   - [ ] Implement the `get_context()` method to retrieve the current context.
+3. **Load LLM Models**
+   - [ ] Add code to load the first LLM model into the notebook.
+   - [ ] Verify the successful loading of the LLM model.
+   - [ ] Load the second LLM model into the notebook.
+   - [ ] Validate the successful loading of the second LLM model.
 
-4. **Implement LLMGenerator**
-   - [ ] Create the LLMGenerator class to generate responses using contextual memory.
-   - [ ] Implement the `generate_response()` method to incorporate the context into prompts.
-   - [ ] Test the LLMGenerator class with sample inputs and outputs.
+4. **Define Prompt Passing Logic**
+   - [ ] Implement logic to pass prompts from the first LLM model to the second.
+   - [ ] Update the context with the output from the second LLM model.
+   - [ ] Refine the prompt passing mechanism for seamless context integration.
 
-5. **Configuration and Customization**
-   - [ ] Design a configuration system to support various LLM frameworks and models.
-   - [ ] Implement the ability to specify LLM paths or names in the configuration.
-   - [ ] Allow customization of additional parameters based on user preferences.
+5. **Implement Conversation Flow**
+   - [ ] Design the conversation flow in the notebook using user prompts.
+   - [ ] Enable the notebook to capture and display LLM-generated responses.
+   - [ ] Iterate the conversation by updating and passing the prompts between LLM models.
 
-6. **Documentation and Examples**
-   - [ ] Write comprehensive documentation for the LLM_Autocontext program.
-   - [ ] Include clear usage instructions and code examples in the README.
-   - [ ] Provide example scripts demonstrating LLM_Autocontext's capabilities.
+6. **Testing and Validation**
+   - [ ] Conduct thorough testing of the notebook's functionality.
+   - [ ] Validate the accuracy and coherence of generated responses.
+   - [ ] Handle edge cases and unexpected user inputs gracefully.
 
-7. **Testing and Validation**
-   - [ ] Create unit tests for the LLMContextManager and LLMGenerator classes.
-   - [ ] Validate the program's functionality with different LLM models and contexts.
-   - [ ] Conduct thorough testing to ensure accuracy and performance.
+7. **Documentation and Examples**
+   - [ ] Document the usage and functionality of the LLM_Autocontext notebook.
+   - [ ] Include clear instructions on how to run and customize the notebook.
+   - [ ] Provide example conversations and code snippets for reference.
 
 8. **Optimization and Performance**
-   - [ ] Identify potential performance bottlenecks and optimize the code if needed.
-   - [ ] Evaluate memory usage and implement memory management strategies.
-   - [ ] Fine-tune the program to improve response generation speed.
+   - [ ] Identify areas for optimization and performance improvement.
+   - [ ] Refactor the code to enhance response generation speed.
+   - [ ] Optimize memory usage and ensure efficient context management.
 
 9. **Integration and Deployment**
-   - [ ] Integrate LLM_Autocontext into existing projects or frameworks, if applicable.
-   - [ ] Prepare the project for deployment, considering packaging and distribution.
-   - [ ] Create a release version and publish it on a package manager or GitHub.
+   - [ ] Test the notebook with different LLM frameworks and models.
+   - [ ] Ensure compatibility with popular Jupyter Notebook environments.
+   - [ ] Prepare the project for deployment and distribution.
 
-10. **Maintenance and Community Engagement**
-    - [ ] Monitor and address issues and bug reports from users.
-    - [ ] Encourage contributions from the community through proper documentation.
-    - [ ] Continuously update and maintain the project as new LLM models emerge.
+10. **Maintenance and Updates**
+    - [ ] Monitor user feedback and address any reported issues promptly.
+    - [ ] Incorporate improvements and updates based on community contributions.
+    - [ ] Keep the project up to date with the latest LLM advancements and frameworks.
 
-This roadmap provides a starting point for the LLM_Autocontext project. As you progress, you may need to adjust and expand the roadmap based on the project's specific requirements and evolving goals.
 ## Features
 
 - Seamlessly integrates contextual memory into LLM instances.
 - Enhances the quality and coherence of generated responses.
-- Supports various LLM frameworks and models.
-- Flexible and customizable configuration options.
-- Lightweight and easy to integrate into existing projects.
+- Utilizes two instances of LLM models in a Jupyter Notebook.
+- Flexible and customizable prompt passing for context updates.
+- Lightweight and easy to incorporate into existing projects.
 
-## Installation
+## Installation 
+### (Only Template, Nothing here is really working yet)
 
-Follow these steps to install and set up LLM_Autocontext:
+To use LLM_Autocontext, follow these installation steps:
 
-1. Clone the LLM_Autocontext repository from GitHub:
+1. Clone or download the LLM_Autocontext repository from GitHub:
 
 ```bash
 git clone https://github.com/your-username/LLM_Autocontext.git
 ```
 
-2. Navigate to the project directory:
-
-```bash
-cd LLM_Autocontext
-```
-
-3. Install the required dependencies:
+2. Install the required dependencies. Ensure you have Jupyter Notebook installed:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Configure the LLM framework and models:
+3. Launch Jupyter Notebook:
 
-   - Open `config.py` file.
-   - Specify the paths or names of the LLM models you want to use.
-   - Adjust any additional configuration parameters according to your requirements.
+```bash
+jupyter notebook
+```
 
-5. LLM_Autocontext is now ready to be used in your project.
+4. Open the LLM_Autocontext notebook (LLM_Autocontext.ipynb) from the project directory.
 
 ## Usage
 
-To utilize LLM_Autocontext in your project, follow these steps:
+To utilize LLM_Autocontext in the Jupyter Notebook, follow these steps:
 
-1. Import the necessary modules:
+1. Open the LLM_Autocontext notebook (LLM_Autocontext.ipynb) in Jupyter Notebook.
 
-```python
-from LLM_Autocontext import LLMContextManager, LLMGenerator
-```
+2. Run the notebook cells sequentially.
 
-2. Create an instance of the LLMContextManager:
+3. Configure the LLM models:
+   - Provide the paths or names of the LLM models in the notebook.
+   - Adjust any additional configuration parameters as required.
 
-```python
-context_manager = LLMContextManager()
-```
+4. Execute the cells to load the LLM models and define the necessary functions.
 
-3. Set the context for the LLMGenerator:
+5. Set the initial context:
+   - Execute the cell to set the initial context as an empty string or a predefined value.
 
-```python
-context_manager.set_context("previous LLM output")
-```
+6. Begin the conversation:
+   - Execute the cell to prompt the first LLM model with user input.
+   - The output of the first LLM model will be used as context for the second LLM model.
 
-4. Create an instance of the LLMGenerator:
+7. Iterate the conversation:
+   - Execute the cells to pass prompts between the LLM models, updating the context as needed.
+   - Capture and display the responses generated by the LLM models.
 
-```python
-generator = LLMGenerator()
-```
+8. Repeat step 7 for subsequent interactions, allowing the context to evolve and improve responses.
 
-5. Generate responses using the contextual memory:
-
-```python
-response = generator.generate_response(context_manager.get_context(), "prompt")
-```
-
-6. Repeat steps 3-5 for subsequent interactions, updating the context each time.
+9. Customize and experiment with the notebook to suit your specific needs and use cases.
 
 ## Examples
 
-Here are a few examples to demonstrate how LLM_Autocontext can be used:
+Here's an example conversation using the
 
-```python
-from LLM_Autocontext import LLMContextManager, LLMGenerator
+ LLM_Autocontext notebook:
 
-# Set up the context manager
-context_manager = LLMContextManager()
+```
+User: Can you tell me a joke?
+System: Sure, here's a joke: Why don't scientists trust atoms? Because they make up everything!
+User: Haha, that's a good one! Tell me another joke.
+System: Of course! Here's another joke: Why don't skeletons fight each other? They don't have the guts!
+User: That's hilarious! I want to share this with my friend. What was the first joke again?
+System: The first joke was: Why don't scientists trust atoms? Because they make up everything!
+```
 
-# Set the initial context
-context_manager.set_context("")
+In this example, the first LLM model generates a joke response, which becomes the context for the second LLM model. The second model generates another joke, and the context is updated. Finally, the user requests to recall the first joke, and the updated context is utilized to provide the requested information.
 
-# Set up the generator
-generator = LLMGenerator()
+Please note that this example is simplified, and the actual conversation flow and prompts may vary based on your implementation and specific LLM models.
 
-# Start a conversation
-user_input = input("User: ")
-context_manager.set_context(generator.generate_response(context_manager.get_context(), user_input))
+## Contributing
 
-while True:
-    user_input
+Contributions to LLM_Autocontext are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request or create an issue on the GitHub repository.
+
+When contributing, please ensure that your code adheres to the project's coding standards and conventions. Additionally, provide clear documentation and examples to support your changes.
+
+## License
+
+[MIT License](LICENSE)
+
+LLM_Autocontext is licensed under the [MIT License](LICENSE), which allows for both personal and commercial use. Refer to the LICENSE file for more information.
