@@ -26,6 +26,7 @@ By leveraging LLM_Autocontext, you can enhance the context-awareness of LLM mode
 
 1. **Initial Project Setup**
    - [ ] Set up the project structure and directory.
+   - [ ] Try different prompts and configurations for the context generation.
    - [ ] Create a Jupyter Notebook file for LLM_Autocontext.
 
 2. **Research and Requirements Gathering**
