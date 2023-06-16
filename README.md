@@ -7,6 +7,7 @@ LLM_Autocontext is a project aimed at creating a program that leverages the powe
 - [LLM\_Autocontext](#llm_autocontext)
   - [Table of Contents](#table-of-contents)
   - [Introduction](#introduction)
+  - [TODO](#todo)
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -22,6 +23,61 @@ In many natural language processing tasks, context plays a crucial role in gener
 
 By utilizing LLM_Autocontext, you can enhance the context-awareness of LLM models and create more meaningful conversations or coherent text generation. The program acts as a bridge between two instances of LLM, where the output of one instance becomes the context for the next, providing a form of memory that informs subsequent responses.
 
+
+## TODO
+
+1. **Initial Project Setup**
+   - [ ] Set up the project structure and directory.
+   - [ ] Create a README file with project details and roadmap.
+   - [ ] Initialize a Git repository and set up version control.
+
+2. **Research and Requirements Gathering**
+   - [ ] Conduct research on LLM models and context integration techniques.
+   - [ ] Identify suitable LLM frameworks and models to work with.
+   - [ ] Define the requirements and goals of the LLM_Autocontext program.
+   - [ ] Document the research findings and requirements.
+
+3. **Implement LLMContextManager**
+   - [ ] Create the LLMContextManager class to manage the contextual memory.
+   - [ ] Implement the `set_context()` method to update the context with LLM outputs.
+   - [ ] Implement the `get_context()` method to retrieve the current context.
+
+4. **Implement LLMGenerator**
+   - [ ] Create the LLMGenerator class to generate responses using contextual memory.
+   - [ ] Implement the `generate_response()` method to incorporate the context into prompts.
+   - [ ] Test the LLMGenerator class with sample inputs and outputs.
+
+5. **Configuration and Customization**
+   - [ ] Design a configuration system to support various LLM frameworks and models.
+   - [ ] Implement the ability to specify LLM paths or names in the configuration.
+   - [ ] Allow customization of additional parameters based on user preferences.
+
+6. **Documentation and Examples**
+   - [ ] Write comprehensive documentation for the LLM_Autocontext program.
+   - [ ] Include clear usage instructions and code examples in the README.
+   - [ ] Provide example scripts demonstrating LLM_Autocontext's capabilities.
+
+7. **Testing and Validation**
+   - [ ] Create unit tests for the LLMContextManager and LLMGenerator classes.
+   - [ ] Validate the program's functionality with different LLM models and contexts.
+   - [ ] Conduct thorough testing to ensure accuracy and performance.
+
+8. **Optimization and Performance**
+   - [ ] Identify potential performance bottlenecks and optimize the code if needed.
+   - [ ] Evaluate memory usage and implement memory management strategies.
+   - [ ] Fine-tune the program to improve response generation speed.
+
+9. **Integration and Deployment**
+   - [ ] Integrate LLM_Autocontext into existing projects or frameworks, if applicable.
+   - [ ] Prepare the project for deployment, considering packaging and distribution.
+   - [ ] Create a release version and publish it on a package manager or GitHub.
+
+10. **Maintenance and Community Engagement**
+    - [ ] Monitor and address issues and bug reports from users.
+    - [ ] Encourage contributions from the community through proper documentation.
+    - [ ] Continuously update and maintain the project as new LLM models emerge.
+
+This roadmap provides a starting point for the LLM_Autocontext project. As you progress, you may need to adjust and expand the roadmap based on the project's specific requirements and evolving goals.
 ## Features
 
 - Seamlessly integrates contextual memory into LLM instances.
